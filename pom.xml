@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>jsweet-central</id>
+            <name>libs-release</name>
+            <url>http://repository.jsweet.org/artifactory/libs-release-local</url>
+        </repository>
+        <repository>
+            <snapshots />
+            <id>jsweet-snapshots</id>
+            <name>libs-snapshot</name>
+            <url>http://repository.jsweet.org/artifactory/libs-snapshot-local</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>jsweet-plugins-release</id>
+            <name>plugins-release</name>
+            <url>http://repository.jsweet.org/artifactory/plugins-release-local</url>
+        </pluginRepository>
+        <pluginRepository>
+            <snapshots />
+            <id>jsweet-plugins-snapshots</id>
+            <name>plugins-snapshot</name>
+            <url>http://repository.jsweet.org/artifactory/plugins-snapshot-local</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.jsweet.candies</groupId>
+            <artifactId>jsweet-core</artifactId>
+            <version>1.2.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <fork>true</fork>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.jsweet</groupId>
+                <artifactId>jsweet-maven-plugin</artifactId>
+                <version>1.1.1</version>
+                <configuration>
+                    <verbose>true</verbose>
+                    <outDir>target/js</outDir>
+                    <bundle>true</bundle>
+                    <bundlesDirectory>js/dist</bundlesDirectory>
+                    <targetVersion>ES3</targetVersion>
+                    <excludes><exclude>**/def/screeps/**</exclude></excludes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>generate-js</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>jsweet</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+
+                <groupId>com.github.eirslett</groupId>
+                <artifactId>frontend-maven-plugin</artifactId>
+                <!-- Use the latest released version:
+                https://repo1.maven.org/maven2/com/github/eirslett/frontend-maven-plugin/ -->
+                <version>1.2</version>
+                <configuration>
+                    <nodeVersion>v4.6.0</nodeVersion>
+                    <installDirectory>target</installDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <!-- optional: you don't really need execution ids, but it looks nice in your build log. -->
+                        <id>install node and npm</id>
+                        <goals>
+                            <goal>install-node-and-npm</goal>
+                        </goals>
+                        <!-- optional: default phase is "generate-resources" -->
+                        <phase>generate-resources</phase>
+                    </execution>
+                    <execution>
+                        <id>npm install</id>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <phase>generate-resources</phase>
+                    </execution>
+                    <execution>
+                        <id>gulp build</id>
+                        <goals>
+                            <goal>gulp</goal>
+                        </goals>
+
+                        <!-- optional: the default phase is "generate-resources" -->
+                        <phase>generate-resources</phase>
+
+                        <configuration>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <groupId>org.parakoopa</groupId>
+    <artifactId>sreeps-api</artifactId>
+    <version>1.0</version>
+
+
+</project>

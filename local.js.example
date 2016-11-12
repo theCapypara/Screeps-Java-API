@@ -1,0 +1,8 @@
+module.exports = {
+    credentials: {
+        host: 'screeps.com',
+        email: '',
+        password: '',
+        branch: ''
+    },
+};

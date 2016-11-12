@@ -1,0 +1,14 @@
+{
+  "name": "java-screeps-api",
+  "version": "1.0.0",
+  "description": "See README.md",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-insert": "^0.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-screeps": "^1.0.2",
+    "gulp-replace": "^0.5.4"
+  }
+}
