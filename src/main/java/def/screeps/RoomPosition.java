@@ -146,14 +146,6 @@ public class RoomPosition extends jsweet.lang.Object {
     native public <T> T[] lookFor(String type);
     /** This is an automatically generated object type (see the source definition). */
     @jsweet.lang.ObjectType
-    public static class Opts extends jsweet.lang.Object {
-        @jsweet.lang.Optional
-        public jsweet.util.union.Union<?,String> filter;
-        @jsweet.lang.Optional
-        public String algorithm;
-    }
-    /** This is an automatically generated object type (see the source definition). */
-    @jsweet.lang.ObjectType
     public static class Target extends jsweet.lang.Object {
         public RoomPosition pos;
     }

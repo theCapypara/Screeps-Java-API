@@ -1,4 +1,6 @@
 package def.screeps;
+import jsweet.lang.Object;
+
 /**
  * Blocks movement of hostile creeps, and defends your creeps and structures on
  * the same tile. Can be used as a controllable gate.

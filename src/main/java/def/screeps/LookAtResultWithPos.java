@@ -1,4 +1,6 @@
 package def.screeps;
+import jsweet.lang.Object;
+
 @jsweet.lang.Interface
 public abstract class LookAtResultWithPos extends jsweet.lang.Object {
     public double x;

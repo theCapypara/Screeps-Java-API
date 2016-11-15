@@ -1,7 +1,6 @@
 package def.screeps;
 /** This class holds all the global functions and variables of the def.screeps package. */
-public final class Globals extends jsweet.lang.Object {
-    private Globals(){}
+public final class Globals {
     /**
  * This file is Screeps API description file.
  * This might need some updates when Screeps publishes new features or changes it's existing API

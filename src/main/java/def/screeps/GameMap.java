@@ -1,4 +1,6 @@
 package def.screeps;
+import jsweet.lang.Object;
+
 /**
  * A global object representing world map. Use it to navigate between rooms. The object is accessible via Game.map property.
  */

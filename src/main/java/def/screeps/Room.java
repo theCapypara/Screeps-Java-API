@@ -167,11 +167,6 @@ public class Room extends jsweet.lang.Object {
     }
     /** This is an automatically generated object type (see the source definition). */
     @jsweet.lang.ObjectType
-    public static class Opts extends jsweet.lang.Object {
-        public jsweet.util.union.Union<?,String> filter;
-    }
-    /** This is an automatically generated object type (see the source definition). */
-    @jsweet.lang.ObjectType
     public static class Target extends jsweet.lang.Object {
         public RoomPosition pos;
     }

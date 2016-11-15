@@ -1,4 +1,6 @@
 package def.screeps;
+import jsweet.lang.Object;
+
 /**
  * RawMemory object allows to implement your own memory stringifier instead of built-in serializer based on JSON.stringify.
  */

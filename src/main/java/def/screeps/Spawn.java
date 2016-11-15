@@ -1,4 +1,6 @@
 package def.screeps;
+import jsweet.lang.Object;
+
 /**
  * Spawns are your colony centers. You can transfer energy into it and create new creeps using createCreep() method.
  */

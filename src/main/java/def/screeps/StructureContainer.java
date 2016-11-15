@@ -1,4 +1,6 @@
 package def.screeps;
+import jsweet.lang.Object;
+
 /**
  * Contains up to 2,000 resource units. Can be constructed in neutral rooms. Decays for 5,000 hits per 100 ticks.
  */

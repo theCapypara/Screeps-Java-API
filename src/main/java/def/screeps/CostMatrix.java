@@ -1,4 +1,6 @@
 package def.screeps;
+import jsweet.lang.Object;
+
 /**
  * Container for custom navigation cost data.
  */
@@ -8,7 +10,7 @@ public abstract class CostMatrix extends jsweet.lang.Object {
      * Creates a new CostMatrix containing 0's for all positions.
      * @constructor
      */
-    public CostMatrix(){}
+    //public CostMatrix(){}
     /**
      * Set the cost of a position in this CostMatrix.
      * @param x X position in the room.

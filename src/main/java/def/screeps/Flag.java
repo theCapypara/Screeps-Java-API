@@ -1,4 +1,6 @@
 package def.screeps;
+import jsweet.lang.Object;
+
 /**
  * A flag. Flags can be used to mark particular spots in a room. Flags are visible to their owners only.
  */
