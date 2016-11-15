@@ -12,3 +12,9 @@ A detailed Readme will probably be added later. But for now here's a short expla
 
 Typescript defintions taken from
 https://github.com/screepers/Screeps-Typescript-Declarations/
+
+Current TODOs:
+
+* Allow for local folder deployment instead of Gulp (for local servers)
+* Finish and include demo project
+* Update this README
