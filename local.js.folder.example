@@ -1,0 +1,4 @@
+module.exports = {
+    method: 'folder',
+    path: '/home/yourname/.config/Screeps/scripts/screeps.com/default'
+};

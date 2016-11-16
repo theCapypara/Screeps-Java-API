@@ -5,7 +5,7 @@ var replace = require('gulp-replace');
 var concat = require('gulp-concat');
 
 var screeps = require('gulp-screeps');
-var credentials = require('./local.js').credentials;
+var localConfig = require('./local.js');
 
 /** Temporary, once JSweet get's fixed, remove this and turn tsOnly off in pom.xml
     This removes all invalid empty, non-declared root namespaces from the bundle.d.ts
@@ -22,9 +22,9 @@ gulp.task('make-js', ['prepare-ts'], () => {
         .pipe(ts({
             out: 'bundle.js'
         }))
-      .on('error', function (error) {
+        .on('error', function (error) {
             process.exit(1);
-       })
+        })
         .pipe(gulp.dest('target/js'));
 });
 /** End temporary **/
@@ -39,8 +39,15 @@ gulp.task('prepare-js', ['make-js'],  () => {
 });
 
 gulp.task('screeps',['make-js', 'prepare-js'], () => {
-    gulp.src('target/screeps/*.js')
-        .pipe(screeps(credentials));
+    if (localConfig.method == 'gulp') {
+        return gulp
+            .src('target/screeps/*.js')
+            .pipe(screeps(localConfig.credentials));
+    } else {
+        return gulp
+            .src('target/screeps/*.js')
+            .pipe(gulp.dest(localConfig.path));
+    }
 });
 
 gulp.task('default', ['make-js', 'prepare-js', 'screeps']);
