@@ -16,11 +16,6 @@ public class Main {
 
         // Insert your code here.
 
-        //For future testing:
-        //HashMap<String, Integer> testmap = new HashMap<>();
-        //testmap.put("Test",3);
-        //System.out.println(testmap);
-        //new TutorialExample().loop();
     }
 
     /**
