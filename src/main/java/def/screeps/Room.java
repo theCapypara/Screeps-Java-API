@@ -1,4 +1,7 @@
 package def.screeps;
+
+import org.parakoopa.screeps.api.memoryDef.RoomMemory;
+
 /**
  * An object representing the room in which your units and structures are in. It can be used to look around, find paths, etc. Every object in the room contains its linked Room instance in the room property.
  */
@@ -18,7 +21,7 @@ public class Room extends jsweet.lang.Object {
     /**
      * A shorthand to Memory.rooms[room.name]. You can use it for quick access the room???s specific memory data object.
      */
-    public Object memory;
+    public RoomMemory memory;
     /**
      * One of the following constants:
      * MODE_SIMULATION, MODE_SURVIVAL, MODE_WORLD, MODE_ARENA

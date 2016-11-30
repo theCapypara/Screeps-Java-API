@@ -1,5 +1,6 @@
 package def.screeps;
 import jsweet.lang.Object;
+import org.parakoopa.screeps.api.memoryDef.FlagMemory;
 
 /**
  * A flag. Flags can be used to mark particular spots in a room. Flags are visible to their owners only.
@@ -12,7 +13,7 @@ public class Flag extends RoomObject {
     /**
      * A shorthand to Memory.flags[flag.name]. You can use it for quick access the flag's specific memory data object.
      */
-    public Object memory;
+    public FlagMemory memory;
     /**
      * Flag???s name. You can choose the name while creating a new flag, and it cannot be changed later. This name is a hash key to access the spawn via the Game.flags object.
      */

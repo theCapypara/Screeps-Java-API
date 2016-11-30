@@ -1,5 +1,6 @@
 package def.screeps;
 import jsweet.lang.Object;
+import org.parakoopa.screeps.api.memoryDef.SpawnMemory;
 
 /**
  * Spawns are your colony centers. You can transfer energy into it and create new creeps using createCreep() method.
@@ -28,7 +29,7 @@ public class Spawn extends OwnedStructure {
     /**
      * A shorthand to Memory.spawns[spawn.name]. You can use it for quick access the spawn???s specific memory data object.
      */
-    public Object memory;
+    public SpawnMemory memory;
     /**
      * Whether it is your spawn or foe.
      */
